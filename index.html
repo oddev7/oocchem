@@ -1,133 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OOC</title>
-    <meta name="robots" content="ALL, INDEX, FOLLOW">
-    <meta name="Copyright" content="Copyright © OOC">
-    
+
     <style>
-    #contentsmall {
-	    font-family: Tahoma, Geneva, sans-serif;
-	    font-size: 9pt;
-	    line-height: normal;
-	    color: #333;
-    }
-    .bodytext {
-	    font-family: Tahoma, Geneva, sans-serif;
-	    font-size: 11pt;
-	    line-height: 14pt;
-	    color: #000;
-	    text-align: justify;
-	    letter-spacing: 0.4px;
-    }
-	a {
-		color: black;
-		text-decoration: none;
-	}
-	a:hover {
-		text-decoration: underline;
-	}
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Tahoma, Geneva, sans-serif;
+            color: #333;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Containers */
+        .wrapper {
+            max-width: 960px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        /* Header image */
+        .header-img {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+            position: relative; /* allow positioning children */
+            align-items: flex-start; /* push image to the top */
+
+
+        }
+
+        .header-img img {
+            width: 200px;
+            display: block;
+
+            position: relative;
+            top: -25px;
+            
+        }
+
+        /* Slideshow image (static for now) */
+        .slideshow img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Two-column section */
+        .flex-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .column {
+            flex: 1 1 300px;
+        }
+
+        .bodytext {
+            font-size: 11pt;
+            line-height: 1.4em;
+            letter-spacing: 0.4px;
+            color: #000;
+            text-align: justify;
+        }
+
+        #contentsmall {
+            font-size: 9pt;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #ccc;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 600px) {
+            .bodytext {
+                font-size: 12pt;
+            }
+        }
+
+        .menu{
+            width: 100%;
+            
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-item{
+            font-weight: bolder;
+            padding: 5px;
+            
+        }
+        .menu-item:hover{
+            background-color: #ccc;
+            cursor: pointer;
+        }
     </style>
-
-    <!-- jQuery -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-
-    <!-- Cycle plugin -->
-    <!--script type="text/javascript" src="jquery.cycle.all.latest.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(() => {
-            $('.slideshow').cycle({
-                fx: 'fade'
-            });
-        });
-    </script-->
-
 </head>
+
 <body>
-    <div id="page-wrapper">
 
-        <table width="958" align="center" border="0">
-            <tbody>
-                <tr>
-                    <td align="left" valign="top" width="300px" style="padding: 0; height: 50px;">
-                        <img src="images/OOC-CHEM.jpg" height="100%" width="370px" style="object-fit: none; display: block;">
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<div class="wrapper">
 
-        <hr align="center" width="955" size="2" noshade="noshade">
-
-        <table width="956" align="center" border="0">
-            <tbody>
-                <tr>
-                    <td width="952" align="center">
-                        <div class="slideshow" style="position: relative;">
-                            <img src="images/home1.jpg" width="955" height="400"> <!-- style="position: absolute; top: 0px; left: 0px; z-index: 3; width: 955px; height: 400px;" display: none; opacity: 0; -->
-                            <!--img src="images/home2.jpg" width="955" height="400" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 3; opacity: 0; width: 955px; height: 400px;"-->
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-        <table width="955" border="0" align="center" cellpadding="5" cellspacing="5">
-            <tbody>
-                <tr>
-                    <td width="423" valign="top">
-                        <p class="bodytext"><strong>Contact Us:</strong></p>
-                        <p class="bodytext">
-                            Delavska cesta 7
-                            <br>
-                            4000, Kranj, Slovenia
-                            <br>
-                            <!-- Tel / WA: 068.142.052 -->
-                        </p>
-                    </td>
-                    <td width="466" valign="top">
-                        <p class="bodytext"><strong>General Inquiries:</strong></p>
-                        <p class="bodytext">
-                            	Business Development: <a href="mailto:bd@oocchem.com"> bd@oocchem.com </a>
-				<br>
-				Accounting: <a href="mailto:m.kosec@oocchem.com" meta> m.kosec@oocchem.com </a>
-				<br>
-				Sales: <a href="mailto:l.znidarsic@oocchem.com" luka> l.znidarsic@oocchem.com </a>
-                        	<br>
-				Sales: <a href="mailto:j.kosec@oocchem.com" jan> j.kosec@oocchem.com </a>
-				<br>
-				Logistics: <a href="mailto:r.peskar@oocchem.com" rok> r.peskar@oocchem.com </a>
-				<br>
-				Partner relations: <a href="mailto:o.dolenc@oocchem.com" ozbej> o.dolenc@oocchem.com </a>
-			</p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-        <br>
-
-        <hr align="center" width="955" size="2" noshade="noshade">
-
-        <table width="955" border="0" align="center">
-            <tbody>
-                <tr>
-                    <td align="left" class="bodytext" id="contentsmall">
-                        <!-- © Copyright &nbsp;&nbsp; OOC &nbsp;&nbsp; --> All Rights Reserved. &nbsp;&nbsp; For international calls, we kindly prefer using WhatsApp to make communication easier and more reliable.
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-
-    
-    
-    
-    
+    <!-- Header -->
+    <a href="">
+    <div class="header-img">
+        <img src="images/OOC-CHEM.png" alt="OOC Logo">
     </div>
-    
-    <br>
+    </a>
+
+    <hr>
+
+    <div class="menu">
+        <a href="mehanizacija.html"><div class="menu-item">Mehanizacija</div></a>
+    </div>
+
+    <hr>
+
+    <!-- Slideshow (single image) -->
+    <div class="slideshow">
+        <img src="images/home1.jpg" alt="Slideshow Image">
+    </div>
+
+    <hr>
+    <!-- Contact section -->
+    <div class="flex-row">
+        <div class="column">
+            <p class="bodytext"><strong>Contact Us:</strong></p>
+            <p class="bodytext">
+                Delavska cesta 7<br>
+                4000, Kranj, Slovenia
+            </p>
+        </div>
+
+        <div class="column">
+            <p class="bodytext"><strong>General Inquiries:</strong></p>
+            <p class="bodytext">
+                Business Development: <a href="mailto:bd@oocchem.com" class="email-link">bd@oocchem.com</a><br>
+                Partner relations: <a href="mailto:o.dolenc@oocchem.com" class="email-link">o.dolenc@oocchem.com</a><br>
+                Accounting: <a href="mailto:m.kosec@oocchem.com" class="email-link">m.kosec@oocchem.com</a><br>
+                Sales: <a href="mailto:l.znidarsic@oocchem.com" class="email-link">l.znidarsic@oocchem.com</a><br>
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <p id="contentsmall">
+        All Rights Reserved. &nbsp;&nbsp;
+    </p>
+
+</div>
+
 </body>
 </html>
