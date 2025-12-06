@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOC</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Tahoma, Geneva, sans-serif;
+            color: #333;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Containers */
+        .wrapper {
+            max-width: 960px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        /* Header image */
+        .header-img {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+            position: relative; /* allow positioning children */
+            align-items: flex-start; /* push image to the top */
+
+
+        }
+
+        .header-img img {
+            width: 365px;
+            display: block;
+
+            position: relative;
+            top: -140px;
+            
+        }
+
+        /* Slideshow image (static for now) */
+        .slideshow img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Two-column section */
+        .flex-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .column {
+            flex: 1 1 300px;
+        }
+
+        .bodytext {
+            font-size: 11pt;
+            line-height: 1.4em;
+            letter-spacing: 0.4px;
+            color: #000;
+            text-align: justify;
+        }
+
+        #contentsmall {
+            font-size: 9pt;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #ccc;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 600px) {
+            .bodytext {
+                font-size: 12pt;
+            }
+        }
+
+        .menu{
+            width: 100%;
+            
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-item{
+            font-weight: bolder;
+            padding: 5px;
+            
+        }
+        .menu-item:hover{
+            background-color: #ccc;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- Header -->
+    <a href="">
+    <div class="header-img">
+        <img src="images/OOC-CHEM.png" alt="OOC Logo">
+    </div>
+    </a>
+
+    <hr>
+
+    <div class="menu">
+        <a href="mehanizacija.html"><div class="menu-item">Mehanizacija</div></a>
+    </div>
+
+    <hr>
+
+    <!-- Slideshow (single image) -->
+    <div class="slideshow">
+        <img src="images/home1.jpg" alt="Slideshow Image">
+    </div>
+
+    <hr>
+    <!-- Contact section -->
+    <div class="flex-row">
+        <div class="column">
+            <p class="bodytext">
+                OOC d.o.o. <br>
+                Delavska cesta 7<br>
+                4000, Kranj <br>
+                Slovenija <br><br>
+                Tel: +386 68 142 052
+            </p>
+        </div>
+
+        <div class="column">
+            <p class="bodytext">
+                Business Development: <a href="mailto:bd@oocchem.com" class="email-link">bd@oocchem.com</a><br>
+                Partner relations: <a href="mailto:o.dolenc@oocchem.com" class="email-link">o.dolenc@oocchem.com</a><br>
+                Accounting: <a href="mailto:j.kosec@oocchem.com" class="email-link">j.kosec@oocchem.com</a><br>
+                Sales: <a href="mailto:l.znidarsic@oocchem.com" class="email-link">l.znidarsic@oocchem.com</a><br>
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <p id="contentsmall">
+        All Rights Reserved. &nbsp;&nbsp;
+        OOC d.o.o. &nbsp;&nbsp;
+        Matična št: 39424227
+    </p>
+
+</div>
+
+</body>
+</html>
