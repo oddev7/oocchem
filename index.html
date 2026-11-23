@@ -42,6 +42,7 @@
                 type="text"
                 placeholder="Tracking number"
                 name="tracking_number"
+                id="tracking-number-input"
             >
             <button type="submit">Track</button>
         </form>
@@ -52,9 +53,30 @@
         const trackingId = params.get("tracking_number");
 
         if (trackingId) {
-            document.getElementById("tracking-number").textContent = `Currently no information for ${trackingId}.`;
+            document.querySelector("#tracking-number-input").value = trackingId;
             document.getElementById("tracking-number").scrollIntoView();
+
+            the_info = `There is currently no shipment with that tracking ID. (${trackingId})`
+            tracking_infos = {
+                "23112026_01" : [
+                    `23.11.2026 10:50 - <b>Tracking ID: ${trackingId}</b>`, 
+                    `23.11.2026 10:50 - <b>Shipment entered into system</b>`, 
+                ], 
+            }
+
+            if (tracking_infos[trackingId])
+            {
+                the_info = ""
+                tracking_infos[trackingId].forEach(element => {
+                    the_info += element + "<br>"
+                });
+            }
+            
+            document.getElementById("tracking-number").innerHTML = the_info;
         }
+
+
+
     </script>
 
 
